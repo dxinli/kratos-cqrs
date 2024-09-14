@@ -29,7 +29,7 @@ VALUES ('a', 'floor'),
 
 -- 插入测试数据 - 传感器遥感数据
 INSERT INTO sensor_data (time, sensor_id, cpu, temperature)
-SELECT time,
+SELECT EXTRACT(EPOCH FROM g1.time)::bigint AS time,
        sensor_id,
        random()       AS cpu,
        random() * 100 AS temperature
