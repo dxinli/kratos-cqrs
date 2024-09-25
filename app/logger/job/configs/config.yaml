@@ -9,7 +9,7 @@ server:
     timeout: 1s
   kafka:
     addrs:
-      - localhost:9092
+      - localhost:9093
 data:
   database:
     driver: postgres
